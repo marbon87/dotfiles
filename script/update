@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# update dotfiles cautiously (without symlinking)
+
+cd "$(dirname $0)/.."
+
+echo "Updating dotfiles..."
+git pull
+git submodule foreach git pull
+
+# update homebrew
+
+echo "Updating homebrew..."
+brew update
