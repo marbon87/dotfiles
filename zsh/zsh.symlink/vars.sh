@@ -5,7 +5,8 @@ export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
 
 #grep
-export GREP_OPTIONS='--color=auto'
+export GREP_OPTIONS='--color=always'
+export GREP_COLOR='0;31;40'
 
 # editor
 export EDITOR=vim
