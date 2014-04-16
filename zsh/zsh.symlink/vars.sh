@@ -12,4 +12,8 @@ export GREP_COLOR='0;31;40'
 export EDITOR=vim
 
 # scala
-export SCALA_HOME=/usr/local/Cellar/scala/2.10.3
+export SCALA_HOME=/usr/local/Cellar/scala/2.10.4
+
+# java
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7/Contents/Home

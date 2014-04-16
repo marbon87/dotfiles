@@ -45,6 +45,7 @@ Bundle 'tpope/vim-markdown'
 " Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex.git'
 Bundle 'jansenm/vim-cmake'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'Yggdroot/indentLine'
 " "}}}
 
 filetype plugin indent on
