@@ -40,12 +40,12 @@ Bundle 'ervandew/supertab'
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-markdown'
+" Bundle 'tpope/vim-markdown'
 " non-Github projects
 " Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex.git'
 Bundle 'jansenm/vim-cmake'
 Bundle 'derekwyatt/vim-scala'
-Bundle 'Yggdroot/indentLine'
+" Bundle 'Yggdroot/indentLine'
 " "}}}
 
 filetype plugin indent on
@@ -144,6 +144,7 @@ let g:tagbar_type_go = {
 " General "{{{
 
 syntax on                              " syntax highlighting
+set backspace=2
 
 set omnifunc=syntaxcomplete#Complete
 
@@ -242,9 +243,20 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" fast hexmode
+map <Leader>hon :%!xxd<CR>
+map <Leader>hof :%!xxd -r<CR>
+
 " "}}}
 
 " File specific "{{{
+
+" indent xml files
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+
+" indent html files
+au FileType html setlocal equalprg=xmllint\ --format\ --recover\ --html\ --htmlout\ -\ 2>/dev/null
+
 
 " gofmt on save go files
 au FileType go au BufWritePre <buffer> Fmt
