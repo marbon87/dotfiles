@@ -9,5 +9,9 @@ if test ! $(which brew); then
   brew install mvn
   brew install ant
   brew install ssh-copy-id
+  brew install ruby
+  brew install scala
+  brew install python
   brew install pass
+  brew install android-sdk
 fi
