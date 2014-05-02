@@ -14,4 +14,6 @@ if test ! $(which brew); then
   brew install python
   brew install pass
   brew install android-sdk
+  brew install pidcat
+  brew install tmux
 fi
