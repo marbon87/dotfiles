@@ -15,7 +15,7 @@ Bundle 'gmarik/vundle'
 " File browser
 Bundle 'scrooloose/nerdtree'
 " Show compiler errors
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
 Bundle 'SirVer/ultisnips'
 Bundle 'majutsushi/tagbar'
 Bundle 'bufexplorer.zip'
@@ -24,13 +24,13 @@ Bundle 'a.vim'
 " ag optimized search tool like grep
 Bundle 'rking/ag.vim'
 " ack optimized tool for code searching
-Bundle 'mileszs/ack.vim'
+" Bundle 'mileszs/ack.vim'
 " git information on left side
 Bundle 'airblade/vim-gitgutter'
 " golang autocomplete plugin
 Bundle 'Blackrush/vim-gocode'
 " file information plugin
- Bundle 'bling/vim-airline'
+Bundle 'bling/vim-airline'
 " open files
 Bundle 'kien/ctrlp.vim'
 " colorschemes
@@ -41,8 +41,6 @@ Bundle 'ervandew/supertab'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'altercation/vim-colors-solarized'
 " Bundle 'tpope/vim-markdown'
-" non-Github projects
-" Bundle 'git://git.code.sf.net/p/vim-latex/vim-latex.git'
 Bundle 'jansenm/vim-cmake'
 Bundle 'derekwyatt/vim-scala'
 " Bundle 'Yggdroot/indentLine'
@@ -141,6 +139,10 @@ let g:tagbar_type_go = {
 
 " Scala
 let g:scala_sort_across_groups=1
+
+" Airline
+let g:airline#extensions#tabline#enabled=2 
+set laststatus=2
 
 " "}}}
 
