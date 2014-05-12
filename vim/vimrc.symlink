@@ -149,7 +149,8 @@ set laststatus=2
 " General "{{{
 
 syntax on                              " syntax highlighting
-set backspace=2
+set backspace=2                        " now backspace deletes characters
+set hlsearch                           " highlight search results.
 
 set omnifunc=syntaxcomplete#Complete
 
