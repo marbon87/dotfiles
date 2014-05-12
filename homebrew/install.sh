@@ -16,4 +16,5 @@ if test ! $(which brew); then
   brew install android-sdk
   brew install pidcat
   brew install tmux
+  brew install macvim
 fi
