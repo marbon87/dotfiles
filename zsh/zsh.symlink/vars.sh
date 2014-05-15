@@ -1,5 +1,8 @@
 # general setting
 
+#cli
+export SCRIPTS=$HOME/bin/scripts
+
 #colors
 export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad

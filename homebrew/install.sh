@@ -17,4 +17,5 @@ if test ! $(which brew); then
   brew install pidcat
   brew install tmux
   brew install macvim
+  brew install npm
 fi
