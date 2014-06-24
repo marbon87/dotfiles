@@ -210,7 +210,7 @@ set grepprg=ag
 
 " Mapping "{{{
 
-map f :Ag<CR>
+" map f :Ag<CR>
 
 " Toogle ctrlp
 map O :CtrlP<CR>
