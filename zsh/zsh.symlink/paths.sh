@@ -8,3 +8,6 @@ export PATH=./bin:$PATH
 
 # Ruby
 export PATH=/usr/local/Cellar/ruby/2.1.1/bin:$PATH
+
+# Golang
+export PATH=$PATH:/usr/local/opt/go/libexec/bin

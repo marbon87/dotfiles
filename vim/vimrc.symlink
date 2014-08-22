@@ -264,7 +264,7 @@ au FileType html setlocal equalprg=xmllint\ --format\ --recover\ --html\ --htmlo
 
 
 " gofmt on save go files
-au FileType go au BufWritePre <buffer> Fmt
+" au FileType go au BufWritePre <buffer> Fmt
 
 " force cpp files
 au BufRead,BufNewFile *.cci,*.cti,*.ih,*.ct set filetype=cpp
