@@ -30,3 +30,4 @@ source ~/.zsh/paths.sh
 source ~/.zsh/alias.sh
 source ~/.zsh/git.sh
 source ~/.zsh/vars.sh
+source /usr/local/opt/autoenv/activate.sh

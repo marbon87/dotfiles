@@ -11,3 +11,6 @@ export PATH=/usr/local/Cellar/ruby/2.1.1/bin:$PATH
 
 # Golang
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# Swift
+export PATH=$PATH:~/devel/swift/bin

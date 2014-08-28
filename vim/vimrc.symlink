@@ -41,8 +41,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jansenm/vim-cmake'
-Bundle 'derekwyatt/vim-scala'
-" Bundle 'Yggdroot/indentLine'
+Bundle 'tpope/vim-fugitive'
 " "}}}
 
 filetype plugin indent on
