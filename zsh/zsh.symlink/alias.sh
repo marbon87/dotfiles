@@ -16,3 +16,6 @@ alias upip='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip ins
 alias set_java_8='export JAVA_HOME=/java/jdk1.8'
 alias set_java_7='export JAVA_HOME=/java/jdk1.7'
 alias set_java_6='export JAVA_HOME=/java/jdk1.6'
+
+# brew
+alias brewup='brew update && brew cask update && brew upgrade'
