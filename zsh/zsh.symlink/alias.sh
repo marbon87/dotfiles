@@ -19,3 +19,6 @@ alias set_java_6='export JAVA_HOME=/java/jdk1.6'
 
 # brew
 alias brewup='brew update && brew cask update && brew upgrade'
+
+# ssh
+alias ssh='sshrc'
