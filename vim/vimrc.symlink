@@ -28,6 +28,7 @@ Bundle 'rking/ag.vim'
 " git information on left side
 Bundle 'airblade/vim-gitgutter'
 " golang autocomplete plugin
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'Blackrush/vim-gocode'
 " file information plugin
 Bundle 'bling/vim-airline'
@@ -206,6 +207,15 @@ autocmd InsertLeave * :set relativenumber
 set grepprg=ag
 
 " "}}}
+
+" Commands "{{{
+    
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+
+" }}}
 
 " Mapping "{{{
 
