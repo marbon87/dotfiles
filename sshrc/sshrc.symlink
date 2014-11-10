@@ -1,20 +1,24 @@
-# commands
-alias lsa='ls -lah'
-alias l='ls -lah'
-alias ll='ls -lh'
-alias la='ls -lAh'
-alias sl=ls # often screw this up
+if [ $(hostname | grep bsd9.fh-muenster.de | wc -l) == 1 ]; then
+    echo 'server1'
+else
+    # commands
+    alias lsa='ls -lah'
+    alias l='ls -lah'
+    alias ll='ls -lh'
+    alias la='ls -lAh'
+    alias sl=ls # often screw this up
 
-alias ..='cd ..'
-alias ...='cd ../..'
-alias less='less -N'
+    alias ..='cd ..'
+    alias ...='cd ../..'
+    alias less='less -N'
 
-# git
-alias gs='git status'
-alias gd='git diff'
-alias glog='git log'
-alias gca='git commit -v -a'
-alias gl='git pull'
-alias gp='git push'
-alias gpb='git push --set-upstream origin HEAD' # Push local branch to remote
-alias gco='git checkout'
+    # git
+    alias gs='git status'
+    alias gd='git diff'
+    alias glog='git log'
+    alias gca='git commit -v -a'
+    alias gl='git pull'
+    alias gp='git push'
+    alias gpb='git push --set-upstream origin HEAD' # Push local branch to remote
+    alias gco='git checkout'
+fi

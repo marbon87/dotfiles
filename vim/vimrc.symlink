@@ -18,7 +18,7 @@ Bundle 'scrooloose/nerdtree'
 " Bundle 'scrooloose/syntastic'
 Bundle 'SirVer/ultisnips'
 Bundle 'majutsushi/tagbar'
-Bundle 'bufexplorer.zip'
+"Bundle 'bufexplorer.zip'
 Bundle 'AutoTag'
 Bundle 'a.vim'
 " ag optimized search tool like grep
@@ -50,6 +50,7 @@ filetype plugin indent on
 " filetype plugin on          " enable after vundle
 " filetype indent on          " enable after vundle
 
+:set term=builtin_ansi
 
 " Plugins configuration "{{{
 
@@ -228,7 +229,7 @@ map O :CtrlP<CR>
 map P :TagbarToggle<CR>
 
 " Toogle BufferLis
-map B :BufExplorer<CR>
+" map B :BufExplorer<CR>
 
 " Toogle NERDTree
 map T :NERDTreeToggle<CR>
