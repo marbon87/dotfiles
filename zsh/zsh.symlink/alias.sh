@@ -21,7 +21,7 @@ alias set_java_6='export JAVA_HOME=/java/jdk1.6'
 alias brewup='brew update && brew cask update && brew upgrade'
 
 # ssh
-alias ssh='sshrc'
+# alias ssh='sshrc'
 
 # sctp
 alias load_sctp='sudo kextload /System/Library/Extensions/SCTP.kext'
