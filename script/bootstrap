@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 # bootstrap the system, installing dotfiles and basic dependencies
 
 SRCDIR=$(pwd)
