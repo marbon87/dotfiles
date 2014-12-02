@@ -31,8 +31,6 @@ Bundle 'Valloric/YouCompleteMe'
 
 Bundle 'airblade/vim-gitgutter'
 
-" Floobits
-Bundle 'Floobits/floobits-vim'
 " Tagbar
 Bundle 'majutsushi/tagbar'
 " Dash Plugin
