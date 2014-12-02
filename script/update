@@ -10,5 +10,8 @@ git submodule foreach git pull
 
 # update homebrew
 
-echo "Updating homebrew..."
-brew update
+if [ "$(uname -s)" == "Darwin" ] && [ ! $(which brew) ]; then
+    echo "Updating homebrew..."
+    brew update
+fi
+
