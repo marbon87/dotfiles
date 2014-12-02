@@ -42,7 +42,9 @@ function link {
 }
 
 function defaults {
-  sh -c $SRCDIR/osx/set-defaults.sh
+  if [ "$(uname -s)" == "Darwin" ]; then
+    sh -c $SRCDIR/osx/set-defaults.sh
+  fi
 }
 
 function dotfiles {
