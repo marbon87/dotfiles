@@ -5,11 +5,10 @@
 cd "$(dirname $0)/.."
 
 echo "Updating dotfiles..."
-git pull
-git submodule foreach git pull
+git pull --rebase
+git submodule foreach git pull --rebase origin master
 
 # update homebrew
-
 if [ "$(uname -s)" == "Darwin" ] && [ ! $(which brew) ]; then
     echo "Updating homebrew..."
     brew update
