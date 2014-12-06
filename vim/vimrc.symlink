@@ -44,6 +44,8 @@ Bundle 'Chiel92/vim-autoformat'
 Bundle 'terryma/vim-multiple-cursors'
 " Latex
 Bundle 'lervag/vim-latex'
+" Undotree
+Bundle 'mbbill/undotree'
 
 
 " All of your Plugins must be added before the following line
@@ -149,6 +151,9 @@ nmap <F8> :TagbarToggle<CR>
 
 " Autoformat
 noremap <F3> :Autoformat<CR><CR>
+
+" Undotree
+nnoremap <F5> :UndotreeToggle<cr>
 
 " #####################################################################################
 " Plugin Settings
