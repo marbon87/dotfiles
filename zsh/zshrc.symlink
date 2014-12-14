@@ -54,6 +54,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
+# Private Settings, not inrepo
+source ~/.zshrc.private
+
 # User configuration
 source ~/.zsh/paths.sh
 source ~/.zsh/alias.sh
@@ -61,3 +64,6 @@ source ~/.zsh/git.sh
 source ~/.zsh/vars.sh
 source ~/.zsh/functions.sh
 source ~/.zsh/virtualbox.sh
+
+
+
