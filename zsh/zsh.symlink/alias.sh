@@ -1,7 +1,7 @@
 # gerneral
 
 alias sleepnow="pmset sleepnow"
-alias l='ls -laFG'
+alias l='ls -laFGh'
 alias mkdir='mkdir -p'
 alias du='du -sh'
 alias wc="wc -l"
