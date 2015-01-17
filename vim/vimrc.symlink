@@ -12,10 +12,6 @@ call vundle#begin()
 " let Vundle manage Vundle. Required!
 Bundle 'gmarik/vundle'
 
-" Snippets
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-
 " File Browser
 Bundle 'scrooloose/nerdtree'
 
@@ -28,25 +24,26 @@ Bundle 'bling/vim-airline'
 " Command-T for quick File opening
 Bundle 'wincent/command-t'
 
-if os == "Darwin"
-    Bundle 'Valloric/YouCompleteMe'
-endif
-
 Bundle 'airblade/vim-gitgutter'
 
 " Tagbar
 Bundle 'majutsushi/tagbar'
-" Dash Plugin
-Bundle 'rizzatti/dash.vim'
 " Autoformat
 Bundle 'Chiel92/vim-autoformat'
 " Multicursor
 Bundle 'terryma/vim-multiple-cursors'
-" Latex
-Bundle 'lervag/vim-latex'
 " Undotree
 Bundle 'mbbill/undotree'
 
+if os == "Darwin"
+    Bundle 'Valloric/YouCompleteMe'
+
+    " Snippets
+    Bundle 'SirVer/ultisnips'
+    Bundle 'honza/vim-snippets'
+    " Dash Plugin
+    Bundle 'rizzatti/dash.vim'
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
