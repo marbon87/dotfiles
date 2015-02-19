@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ "$(uname -s)" == "Darwin" ]; then
     if test ! $(which brew); then
