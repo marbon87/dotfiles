@@ -65,7 +65,7 @@ prompt_context() {
   local user=`whoami`
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$user%m"
+    prompt_segment green black "%(!.%{%F{yellow}%}.)$user@%m"
   fi
 }
 
@@ -138,42 +138,6 @@ function _git_time_since_commit() {
   fi
 }
 
-# Determine the time since last commit. If branch is clean,
-# use a neutral color, otherwise colors will vary according to time.
-function _git_time_since_commit() {
-  if git rev-parse --git-dir > /dev/null 2>&1; then
-    # Only proceed if there is actually a commit.
-    if [[ $(git log 2>&1 > /dev/null | grep -c "^fatal: bad default revision") == 0 ]]; then
-      # Get the last commit.
-      last_commit=$(git log --pretty=format:'%at' -1 2> /dev/null)
-      now=$(date +%s)
-      seconds_since_last_commit=$((now-last_commit))
-
-      # Totals
-      minutes=$((seconds_since_last_commit / 60))
-      hours=$((seconds_since_last_commit/3600))
-
-      # Sub-hours and sub-minutes
-      days=$((seconds_since_last_commit / 86400))
-      sub_hours=$((hours % 24))
-      sub_minutes=$((minutes % 60))
-
-      if [ $hours -gt 24 ]; then
-          color=$ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG
-          commit_age="${days}d"
-      elif [ $minutes -gt 60 ]; then
-          color=$ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM
-          commit_age="${sub_hours}h${sub_minutes}m"
-      else
-          color=$ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT
-          commit_age="${minutes}m"
-      fi
-
-      echo "$color$commit_age%{$reset_color%}"
-    fi
-  fi
-}
-
 # Colors vary depending on time lapsed.
 ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg[green]%}"
 ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%{$fg[yellow]%}"
@@ -184,6 +148,7 @@ ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg[white]%}"
 build_prompt() {
   RETVAL=$?
   prompt_status
+  prompt_context
   prompt_git
   prompt_dir
   prompt_end
