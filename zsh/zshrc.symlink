@@ -68,4 +68,4 @@ source ~/.zsh/functions.sh
 source ~/.zsh/virtualbox.sh
 
 # Autojump
-[[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
+# [[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
