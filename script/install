@@ -6,6 +6,8 @@ set -e
 
 cd "$(dirname $0)/.."
 
+git submodule init
+
 find . -name install.sh | while read installer; do
   bash -c "${installer}"
 done
