@@ -17,8 +17,8 @@ export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
 
 #grep
-export GREP_OPTIONS='--color=always'
 export GREP_COLOR='0;31;40'
+alias grep="grep --color=always"
 
 # editor
 export EDITOR=vim
