@@ -11,3 +11,16 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Private Settings, not inrepo
+if [[ -a ~/.zshrc.private ]]; then
+    source ~/.zshrc.private
+fi
+
+# User configuration
+source ~/.zsh/paths.sh
+source ~/.zsh/alias.sh
+source ~/.zsh/git.sh
+source ~/.zsh/vars.sh
+source ~/.zsh/functions.sh
+source ~/.zsh/virtualbox.sh
