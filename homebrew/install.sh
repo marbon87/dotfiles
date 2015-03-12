@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
 
-if [ "$(uname -s)" == "Darwin" ]; then
+echo "Homebrew:install"
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
     if test ! $(which brew); then
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         brew tap homebrew/science

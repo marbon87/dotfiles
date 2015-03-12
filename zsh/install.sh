@@ -1,4 +1,4 @@
-#!/bin/bash
-#if [ "$(uname -s)" != "Darwin" ]; then
-#fi
+#!/bin/zsh
+
+echo "zsh:install"
 
