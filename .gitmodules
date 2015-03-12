@@ -1,6 +1,6 @@
 [submodule "vim/vim.symlink/bundle/vundle"]
-    path = vim/vim.symlink/bundle/vundle
-    url = https://github.com/gmarik/Vundle.vim
+	path = vim/vim.symlink/bundle/vundle
+	url = https://github.com/gmarik/Vundle.vim
 [submodule "zsh/prezto.symlink"]
 	path = zsh/prezto.symlink
 	url = https://github.com/sorin-ionescu/prezto.git

@@ -6,8 +6,7 @@ set -e
 
 cd "$(dirname $0)/.."
 
-git submodule init
-git submodule update
+git submodule update --init --recursive
 
 find . -name install.sh | while read installer; do
   bash -c "${installer}"
