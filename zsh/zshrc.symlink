@@ -11,8 +11,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+setopt share_history
 
-# Private Settings, not inrepo
+# Private Settings, not in repo
 if [[ -a ~/.zshrc.private ]]; then
     source ~/.zshrc.private
 fi
