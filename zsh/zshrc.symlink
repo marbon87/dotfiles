@@ -21,7 +21,6 @@ fi
 # User configuration
 source ~/.zsh/paths.sh
 source ~/.zsh/alias.sh
-source ~/.zsh/git.sh
 source ~/.zsh/vars.sh
 source ~/.zsh/functions.sh
 source ~/.zsh/virtualbox.sh
@@ -38,4 +37,7 @@ export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
