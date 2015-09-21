@@ -8,3 +8,5 @@
 #
 #alias greppdf=pdfgrep
 
+function gi() { curl -L -s https://www.gitignore.io/api/$1 ;}
+
