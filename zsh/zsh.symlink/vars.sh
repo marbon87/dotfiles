@@ -27,7 +27,9 @@ export EDITOR=vim
 export SCALA_HOME=/usr/local/Cellar/scala/2.11.1
 
 # java
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+if [[ `uname` == 'Darwin' ]]; then
+    export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+fi
 export JARS="~/.jars"
 
 # android
