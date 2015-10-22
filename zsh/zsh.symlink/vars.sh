@@ -27,8 +27,7 @@ export EDITOR=vim
 export SCALA_HOME=/usr/local/Cellar/scala/2.11.1
 
 # java
-#export JAVA_HOME=/java/jdk1.8
-export JAVA_HOME=/java/jdk1.7
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 export JARS="~/.jars"
 
 # android
