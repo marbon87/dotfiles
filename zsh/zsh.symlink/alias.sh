@@ -17,7 +17,7 @@ alias lock_kernel='sudo nvram boot-args="kext-dev-mode=0"'
 alias unlock_kernel='sudo nvram boot-args="kext-dev-mode=1"'
 
 # OSX Docker
-alias osx_docker_init='eval "$(docker-machine env default)"'
+alias osx_docker_init='eval "$(docker-machine env default-default)"'
 
 # GIT
 
