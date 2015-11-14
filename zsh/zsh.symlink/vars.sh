@@ -24,7 +24,7 @@ alias grep="grep --color=always"
 export EDITOR=vim
 
 # scala
-export SCALA_HOME=/usr/local/Cellar/scala/2.11.1
+export SCALA_HOME=/usr/local/Cellar/scala/2.11.7
 
 # java
 if [[ `uname` == 'Darwin' ]]; then
