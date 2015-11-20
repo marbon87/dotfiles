@@ -77,6 +77,7 @@ set number                      " Show current line number
 set relativenumber              " Show relative line numbers
 
 set cursorline                  " mark current line
+set clipboard=unnamed           " copy yanked lines to system clipboard
 
 colorscheme wombat256mod
 
