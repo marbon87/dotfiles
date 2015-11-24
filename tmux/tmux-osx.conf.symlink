@@ -1,5 +1,4 @@
 # Copy-paste integration
-set -g mouse-select-pane on
 setw -g mode-keys vi
 
 # Copy-paste integration
