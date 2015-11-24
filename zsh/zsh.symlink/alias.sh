@@ -19,6 +19,9 @@ alias unlock_kernel='sudo nvram boot-args="kext-dev-mode=1"'
 # OSX Docker
 alias osx_docker_init='eval "$(docker-machine env docker-default)"'
 
+# Tmux
+alias tmux='tmux -2'
+
 # GIT
 
 #
