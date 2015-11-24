@@ -11,7 +11,6 @@ set -g status-keys vi
 set -g history-limit 10000
 
 setw -g mode-keys vi
-set -g mouse on
 setw -g monitor-activity on
 
 bind-key v split-window -h
@@ -63,3 +62,6 @@ set -g window-status-current-fg black
 set -g window-status-current-attr bold
 
 source ~/dotfiles/powerline/powerline/bindings/tmux/powerline.conf
+
+if-shell "uname | grep -q Darwin" "source-file .tmux-osx.conf" 
+if-shell "uname | grep -q Linux" "source-file .tmux-linux.conf"

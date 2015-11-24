@@ -32,6 +32,16 @@ if [[ `uname` == 'Darwin' ]]; then
 fi
 export JARS="~/.jars"
 
+#export JAVA_HOME=/java/jdk1.8
+if [[ "$OSTYPE" = darwin* ]]; then
+    export JAVA_HOME=/java/jdk1.7
+    export JARS="~/.jars"
+else
+    export JAVA_HOME=~/SDK/jdk
+    export JARS="~/.jars"
+    export PATH=~/SDK/jdk/bin:$PATH
+fi
+
 # android
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
