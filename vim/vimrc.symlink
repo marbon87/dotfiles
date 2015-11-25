@@ -26,14 +26,8 @@ Bundle 'wincent/command-t'
 
 Bundle 'airblade/vim-gitgutter'
 
-" Tagbar
-Bundle 'majutsushi/tagbar'
 " Autoformat
 Bundle 'Chiel92/vim-autoformat'
-" Multicursor
-Bundle 'terryma/vim-multiple-cursors'
-" Undotree
-Bundle 'mbbill/undotree'
 
 if os == "Darwin"
     Bundle 'Valloric/YouCompleteMe'
@@ -41,8 +35,6 @@ if os == "Darwin"
     " Snippets
     Bundle 'SirVer/ultisnips'
     Bundle 'honza/vim-snippets'
-    " Dash Plugin
-    Bundle 'rizzatti/dash.vim'
 endif
 
 " All of your Plugins must be added before the following line
@@ -124,10 +116,10 @@ map T :NERDTreeToggle<CR>
 nnoremap <C-l> :call LineNumber(-2)<cr>
 
 " Window switching
-map <silent> ∆ :wincmd k<CR>
-map <silent> º :wincmd j<CR>
-map <silent> ª :wincmd h<CR>
-map <silent> @ :wincmd l<CR>
+map <silent> ˚ :wincmd k<CR>
+map <silent> ∆ :wincmd j<CR>
+map <silent> ˙ :wincmd h<CR>
+map <silent> ¬ :wincmd l<CR>
 
 " YouCompleteMe
 nnoremap ∂ :YcmCompleter GoTo<CR>
