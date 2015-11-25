@@ -1,4 +1,5 @@
 # Copy-paste integration
+set -g mouse on
 setw -g mode-keys vi
 
 # Copy-paste integration
