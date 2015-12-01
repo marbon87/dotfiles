@@ -33,10 +33,7 @@ fi
 export JARS="~/.jars"
 
 #export JAVA_HOME=/java/jdk1.8
-if [[ "$OSTYPE" = darwin* ]]; then
-    export JAVA_HOME=/java/jdk1.7
-    export JARS="~/.jars"
-else
+if [[ `uname` == 'Linux' ]]; then
     export JAVA_HOME=~/SDK/jdk
     export JARS="~/.jars"
     export PATH=~/SDK/jdk/bin:$PATH
