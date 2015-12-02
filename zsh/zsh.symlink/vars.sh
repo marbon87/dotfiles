@@ -50,3 +50,6 @@ export PATH=$PATH:$GOROOT/bin
 
 # Latex
 export PATH=$PATH:/Library/TeX/texbin
+
+export XDG_CONFIG_HOME=~/.config
+
