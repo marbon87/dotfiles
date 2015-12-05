@@ -3,7 +3,10 @@
 		"right": [
             {
                 "function": "powerline.segments.common.wthr.weather",
-                "priority": 10
+                "priority": 10,
+                "args":{
+                    "location_query":"muenster,de"
+                }
             },
 			{
 				"function": "powerline.segments.common.sys.uptime"
