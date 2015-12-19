@@ -1,8 +1,4 @@
 # Copy-paste integration
-set -g mouse on
-setw -g mode-keys vi
-
-# Copy-paste integration
 set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 # Setup 'v' to begin selection as in Vim
