@@ -2,7 +2,8 @@
 	"segments": {
 		"right": [
 			{
-				"function": "powerline.segments.common.sys.uptime"
+				"function": "powerline.segments.common.sys.uptime",
+				"priority": 100
 			},
 			{
 				"function": "powerline.segments.common.sys.system_load",
@@ -15,7 +16,8 @@
 				}
 			},
             {
-                "function": "powerline.segments.common.time.date"
+                "function": "powerline.segments.common.time.date",
+				"priority": 150
             },
 			{
 				"function": "powerline.segments.common.net.hostname"
