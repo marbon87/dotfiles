@@ -34,9 +34,9 @@ export JARS="~/.jars"
 
 #export JAVA_HOME=/java/jdk1.8
 if [[ `uname` == 'Linux' ]]; then
-    export JAVA_HOME=~/SDK/jdk
+    export JAVA_HOME=/usr/lib/jvm/java-8-oracle
     export JARS="~/.jars"
-    export PATH=~/SDK/jdk/bin:$PATH
+    export PATH=${JAVA_HOME}/bin:$PATH
 fi
 
 # android
