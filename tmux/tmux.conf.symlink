@@ -2,7 +2,7 @@
 # 0 is too far from ` ;)
 set -g base-index 1
 
-set -g mouse on
+set -g mode-mouse on
 
 # Automatically set window title
 set-window-option -g automatic-rename on
@@ -63,9 +63,9 @@ set -g window-status-current-bg white
 set -g window-status-current-fg black
 set -g window-status-current-attr bold
 
-if-shell "uname | grep -q Darwin" "source-file ~/.tmux-osx.conf" 
-if-shell "uname | grep -q Linux" "source-file ~/.tmux-linux.conf"
- 
 # Powerline
 run-shell "powerline-daemon -q"
-run-shell "powerline-config tmux source"
+
+if-shell "uname | grep -q Darwin" "source-file ~/.tmux-osx.conf" 
+if-shell "uname | grep -q Linux" "source-file ~/.tmux-linux.conf"
+
