@@ -29,6 +29,7 @@
 
 CURRENT_BG='NONE'
 SEGMENT_SEPARATOR='⮀'
+SEGMENT_SEPARATOR_COLOR='cyan'
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -38,9 +39,9 @@ prompt_segment() {
   [[ -n $1 ]] && bg="%K{$1}" || bg="%k"
   [[ -n $2 ]] && fg="%F{$2}" || fg="%f"
   if [[ $CURRENT_BG != 'NONE' && $1 != $CURRENT_BG ]]; then
-    echo -n " %{$bg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%} "
+    echo -n "%{$bg%F{$CURRENT_BG}%}%{%F{$SEGMENT_SEPARATOR_COLOR}%}$SEGMENT_SEPARATOR%{$fg%} "
   else
-    echo -n "%{$bg%}%{$fg%} "
+    echo -n "%{$bg%}%{$fg%}%{%F{$SEGMENT_SEPARATOR_COLOR}%}$SEGMENT_SEPARATOR%{$fg%} "
   fi
   CURRENT_BG=$1
   [[ -n $3 ]] && echo -n $3
@@ -49,7 +50,7 @@ prompt_segment() {
 # End the prompt, closing any open segments
 prompt_end() {
   if [[ -n $CURRENT_BG ]]; then
-    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+    echo -n " %{%k%F{$CURRENT_BG}%}%{%F{$SEGMENT_SEPARATOR_COLOR}%}$SEGMENT_SEPARATOR"
   else
     echo -n "%{%k%}"
   fi
@@ -65,7 +66,7 @@ prompt_context() {
   local user=`whoami`
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment green black "%(!.%{%F{yellow}%}.)$user@%m"
+    prompt_segment "" red "%(!.%{%F{yellow}%}.)$user@%m "
   fi
 }
 
@@ -77,17 +78,17 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment yellow black
+      prompt_segment "" yellow
     else
-      prompt_segment green black
+      prompt_segment "" green
     fi
-    echo -n "${ref/refs\/heads\//⭠ }$dirty"
+    echo -n "${ref/refs\/heads\//⭠ }$dirty "
   fi
 }
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment blue black '%~'
+  prompt_segment '' black '%~'
 }
 
 # Status:
@@ -101,7 +102,7 @@ prompt_status() {
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
 
-  [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
+  [[ -n "$symbols" ]] && prompt_segment '' default "$symbols "
 }
 
 # Colors vary depending on time lapsed.

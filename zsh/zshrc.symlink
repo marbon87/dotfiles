@@ -97,3 +97,4 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+DEFAULT_USER=$(whoami)

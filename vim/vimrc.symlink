@@ -17,7 +17,7 @@ Bundle 'scrooloose/nerdtree'
 
 " colorschemes
 Bundle 'ScrollColors'
-Bundle 'wombat256.vim'
+Bundle 'NLKNguyen/papercolor-theme' 
 
 Bundle 'bling/vim-airline'
 
@@ -71,7 +71,7 @@ set relativenumber              " Show relative line numbers
 set cursorline                  " mark current line
 set clipboard=unnamed           " copy yanked lines to system clipboard
 
-colorscheme wombat256mod
+colorscheme PaperColor 
 
 " #####################################################################################
 " Autocommands
