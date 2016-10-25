@@ -66,7 +66,7 @@ prompt_context() {
   local user=`whoami`
 
   if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment "" red "%(!.%{%F{yellow}%}.)$user@%m "
+    prompt_segment green black "%(!.%{%F{yellow}%}.)$user@%m "
   fi
 }
 
@@ -78,9 +78,9 @@ prompt_git() {
     dirty=$(parse_git_dirty)
     ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
     if [[ -n $dirty ]]; then
-      prompt_segment "" yellow
+      prompt_segment yellow black
     else
-      prompt_segment "" green
+      prompt_segment green black
     fi
     echo -n "${ref/refs\/heads\//⭠ }$dirty "
   fi
@@ -88,7 +88,7 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment '' black '%~'
+  prompt_segment blue black '%~'
 }
 
 # Status:
@@ -102,7 +102,7 @@ prompt_status() {
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡ "
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙v"
 
-  [[ -n "$symbols" ]] && prompt_segment '' default "$symbols "
+  [[ -n "$symbols" ]] && prompt_segment black default "$symbols "
 }
 
 # Colors vary depending on time lapsed.
