@@ -99,6 +99,3 @@ compinit
 
 DEFAULT_USER=$(whoami)
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/u/m500709/.sdkman"
-[[ -s "/u/m500709/.sdkman/bin/sdkman-init.sh" ]] && source "/u/m500709/.sdkman/bin/sdkman-init.sh"
