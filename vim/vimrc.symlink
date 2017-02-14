@@ -29,6 +29,8 @@ Bundle 'airblade/vim-gitgutter'
 " Autoformat
 Bundle 'Chiel92/vim-autoformat'
 
+Bundle 'editorconfig/editorconfig-vim'
+
 if os == "Darwin"
     Bundle 'Valloric/YouCompleteMe'
 
