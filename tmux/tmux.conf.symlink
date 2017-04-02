@@ -28,13 +28,13 @@ bind-key M-l resize-pane -R
 
 # Vim style pane selection
 bind h select-pane -L
-bind j select-pane -D 
+bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
 # Use Alt-vim keys without prefix key to switch panes
 bind -n M-h select-pane -L
-bind -n M-j select-pane -D 
+bind -n M-j select-pane -D
 bind -n M-k select-pane -U
 bind -n M-l select-pane -R
 
@@ -65,6 +65,12 @@ set -g window-status-current-attr bold
 run-shell "powerline-daemon -q"
 run-shell "powerline-config tmux setup"
 
-if-shell "uname | grep -q Darwin" "source-file ~/.tmux-osx.conf" 
+if-shell "if [[ `tmux -V | cut -d' ' -f2` < 2.1 ]]; then true; else false; fi" \
+        'set -g mode-mouse on; set -g mouse-resize-pane on; set -g mouse-select-pane on; set -g mouse-select-window on'
+
+if-shell "if [[ `tmux -V | cut -d' ' -f2` > 2.0 ]]; then true; else false; fi" \
+        'set -g mouse on'
+
+if-shell "uname | grep -q Darwin" "source-file ~/.tmux-osx.conf"
 if-shell "uname | grep -q Linux" "source-file ~/.tmux-linux.conf"
 
