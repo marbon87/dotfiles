@@ -45,7 +45,7 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux atom autojump brew docker git git-extras gradle history-substring-search mvn pip python sublime osx zsh-syntax-highlighting)
+plugins=(archlinux atom autojump brew docker docker-comopse git git-extras gradle history-substring-search mvn npm nvm pip python sublime osx zsh-syntax-highlighting)
 
 # User configuration
 
@@ -98,4 +98,13 @@ compinit
 # End of lines added by compinstall
 
 DEFAULT_USER=$(whoami)
+
+
+if [[ -a ~/.nvm/nvm.sh ]]; then
+    if ! [[ -d $NVM_DIR ]]; then
+        echo found
+        export NVM_DIR="$HOME/.nvm"
+    fi
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
 
