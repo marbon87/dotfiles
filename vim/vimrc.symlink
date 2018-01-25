@@ -19,25 +19,9 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'ScrollColors'
 Bundle 'wombat256.vim' 
 
-Bundle 'bling/vim-airline'
-
-" Command-T for quick File opening
-Bundle 'wincent/command-t'
-
 Bundle 'airblade/vim-gitgutter'
 
-" Autoformat
-Bundle 'Chiel92/vim-autoformat'
-
 Bundle 'editorconfig/editorconfig-vim'
-
-if os == "Darwin"
-    Bundle 'Valloric/YouCompleteMe'
-
-    " Snippets
-    Bundle 'SirVer/ultisnips'
-    Bundle 'honza/vim-snippets'
-endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()               " required
@@ -67,7 +51,6 @@ set smartindent                 " enable autoindenting for a new line
 set smarttab                    " enable smart tabbing
 
 let &t_Co=256                   " Colors in VIM
-set number                      " Show current line number
 set relativenumber              " Show relative line numbers
 
 set cursorline                  " mark current line
@@ -81,39 +64,20 @@ colorscheme wombat256mod
 " Autostarts NERDTree if no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd VimEnter * :call LineNumber(1)
 
 " switch between absolute and relative
 " autocmd InsertEnter * :call LineNumber(0)
 " autocmd InsertLeave * :call LineNumber(1)
 " #####################################################################################
-" Functions
-" #####################################################################################
-" switch between absolute and relativ line numbers
-" 0 Absolute, 1 Relative, sonst Toggle
-function! LineNumber(mode)
-    if(a:mode==0)  
-        set norelativenumber
-    elseif(a:mode==1)  
-        set relativenumber
-    else  
-        if(&relativenumber == 1)
-            set norelativenumber
-        else
-            set relativenumber
-        endif
-    endif
-endfunc:
-
-" #####################################################################################
 " Mappings
 " #####################################################################################
-
 " Toogle NERDTree
 map T :NERDTreeToggle<CR>
 
 " Ctrl-N twice toggle numbers
-" nmap <C-l><C-l> :set nonumber<cr>:set norelativenumber<cr>
+nmap <C-l><C-n> :set number<cr>
+nmap <C-l><C-r> :set relativenumber<cr>
+nmap <C-l><C-l> :set nonumber<cr>:set norelativenumber<cr>
 
 nnoremap <C-l> :call LineNumber(-2)<cr>
 
