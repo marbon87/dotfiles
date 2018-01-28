@@ -50,10 +50,8 @@ set smartcase					" ... unless they contain at least one capital letter
 set smartindent                 " enable autoindenting for a new line
 set smarttab                    " enable smart tabbing
 
+set number
 let &t_Co=256                   " Colors in VIM
-set relativenumber              " Show relative line numbers
-
-set cursorline                  " mark current line
 set clipboard=unnamed           " copy yanked lines to system clipboard
 
 colorscheme wombat256mod
@@ -72,8 +70,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map T :NERDTreeToggle<CR>
 
 " Ctrl-N twice toggle numbers
-nmap <C-l><C-n> :set number<cr>
-nmap <C-l><C-r> :set relativenumber<cr>
 nmap <C-l><C-l> :set nonumber<cr>:set norelativenumber<cr>
 
 " Window switching
