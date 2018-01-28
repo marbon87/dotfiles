@@ -65,9 +65,6 @@ colorscheme wombat256mod
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" switch between absolute and relative
-" autocmd InsertEnter * :call LineNumber(0)
-" autocmd InsertLeave * :call LineNumber(1)
 " #####################################################################################
 " Mappings
 " #####################################################################################
@@ -79,16 +76,11 @@ nmap <C-l><C-n> :set number<cr>
 nmap <C-l><C-r> :set relativenumber<cr>
 nmap <C-l><C-l> :set nonumber<cr>:set norelativenumber<cr>
 
-nnoremap <C-l> :call LineNumber(-2)<cr>
-
 " Window switching
 map <silent> ˚ :wincmd k<CR>
 map <silent> ∆ :wincmd j<CR>
 map <silent> ˙ :wincmd h<CR>
 map <silent> ¬ :wincmd l<CR>
-
-" YouCompleteMe
-nnoremap ∂ :YcmCompleter GoTo<CR>
 
 " CommandT
 nnoremap † :CommandT<CR>
@@ -98,35 +90,12 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<c-j>"
-
-" Tagbar
-nmap <F8> :TagbarToggle<CR>
-
-" Autoformat
-noremap <F3> :Autoformat<CR><CR>
-
-" Undotree
-nnoremap <F5> :UndotreeToggle<cr>
-
 " #####################################################################################
 " Plugin Settings
 " #####################################################################################
 
-" ycm settings
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_global_ycm_extra_conf = '~/.config/ycm/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
-
-
 " Automatically reload .vimrc
 au! BufWritePost .vimrc source %
-
-" Airline
-let g:airline#extensions#tabline#enabled = 1
 
 " Undotree
 if has("persistent_undo")
