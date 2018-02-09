@@ -68,6 +68,7 @@ source ~/.zsh/alias.sh
 source ~/.zsh/vars.sh
 source ~/.zsh/functions.sh
 source ~/.zsh/virtualbox.sh
+source ~/.zsh/nvm_loader.sh
 
 # Autojump
 if (($+commands[autojump])) then
@@ -99,13 +100,4 @@ compinit
 
 DEFAULT_USER=$(whoami)
 
-
-if [[ -a ~/.nvm/nvm.sh ]]; then
-    if ! [[ -d $NVM_DIR ]]; then
-#        echo found
-        export NVM_DIR="$HOME/.nvm"
-    fi
-    # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    alias nvm=". ~/.zsh/nvm_loader.sh"
-fi
 
