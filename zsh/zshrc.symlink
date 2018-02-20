@@ -38,6 +38,12 @@ COMPLETION_WAITING_DOTS="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
 
+
+# Appends every command to the history file once it is executed
+setopt inc_append_history
+# Reloads the history whenever you use it
+setopt share_history
+
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 
