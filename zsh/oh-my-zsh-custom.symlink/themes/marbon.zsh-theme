@@ -26,7 +26,7 @@
 
 ### Segment drawing
 # A few utility functions to make it easy and re-usable to draw segmented prompts
-
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=2'
 CURRENT_BG='NONE'
 SEGMENT_SEPARATOR='⮀'
 SEGMENT_SEPARATOR_COLOR='cyan'
