@@ -39,17 +39,10 @@ if [[ `uname` == 'Linux' ]]; then
     export PATH=${JAVA_HOME}/bin:$PATH
 fi
 
-# android
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
-# GO
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-
 # Latex
-export PATH=$PATH:/Library/TeX/texbin
+if [[ `uname` == 'Linux' ]]; then
+    export PATH=$PATH:/Library/TeX/texbin
+fi
 
 export XDG_CONFIG_HOME=~/.config
 
