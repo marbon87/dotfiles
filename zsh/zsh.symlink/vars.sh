@@ -29,6 +29,7 @@ export SCALA_HOME=/usr/local/Cellar/scala/2.11.7
 # java
 if [[ `uname` == 'Darwin' ]]; then
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+    export ANDROID_HOME=/usr/local/share/android-sdk
 fi
 export JARS="~/.jars"
 

@@ -106,4 +106,8 @@ compinit
 
 DEFAULT_USER=$(whoami)
 
-
+###-tns-completion-start-###
+if [ -f ~/.tnsrc ]; then 
+    source ~/.tnsrc 
+fi
+###-tns-completion-end-###
