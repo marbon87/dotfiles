@@ -35,7 +35,7 @@ export JARS="~/.jars"
 
 #export JAVA_HOME=/java/jdk1.8
 if [[ `uname` == 'Linux' ]]; then
-    export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+    export JAVA_HOME=/opt/java/java-11-adopt-openjdk
     export JARS="~/.jars"
     export PATH=${JAVA_HOME}/bin:$PATH
 fi

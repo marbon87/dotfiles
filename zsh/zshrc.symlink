@@ -51,7 +51,11 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+<<<<<<< 053dfcaf1a3913140d7eb0a48dd623a7c4fc84c8
 plugins=(archlinux autojump brew docker docker-compose git git-extras history-substring-search mvn ng npm pip python sublime osx vagrant zsh-autosuggestions)
+=======
+plugins=(archlinux autojump brew docker docker-compose git git-extras globalias history-substring-search kubectl mvn ng npm pip python sublime osx vagrant zsh-autosuggestions zzsh-syntax-highlighting)
+>>>>>>> Update
 
 # User configuration
 
