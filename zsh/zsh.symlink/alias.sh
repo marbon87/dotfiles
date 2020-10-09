@@ -180,11 +180,19 @@ alias gwX='git rm -rf'
 alias gwg='git grep'
 
 
-function updateProj () {
+function mergeMaster() {
     CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
     git checkout master
     git pull --rebase
     git checkout ${CURRENT_BRANCH}
     git merge master
+}
+
+function rebaseMaster() {
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    git checkout master
+    git pull --rebase
+    git checkout ${CURRENT_BRANCH}
+    git rebase master
 }
 
