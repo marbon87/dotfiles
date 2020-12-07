@@ -10,7 +10,7 @@ cd "$(dirname $0)/.."
 
 git submodule update --init --recursive
 
-find . -name install.sh | while read installer; do
+find . -maxdepth 2 -name install.sh | while read installer; do
   echo "Install ${installer}"
   zsh -c "${installer}"
 done
