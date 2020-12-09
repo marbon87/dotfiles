@@ -53,7 +53,9 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(archlinux brew docker docker-compose git git-extras globalias history-substring-search mvn ng npm pip python osx vagrant zsh-autosuggestions z)
 
+
 # User configuration
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=2'
 
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
