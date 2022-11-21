@@ -21,17 +21,21 @@ alias tmux='tmux -2'
 
 function mergeMaster() {
     CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    git stash
     git checkout master
     git pull --rebase
     git checkout ${CURRENT_BRANCH}
     git merge master
+    git stash pop
 }
 
 function rebaseMaster() {
     CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    git stash
     git checkout master
     git pull --rebase
     git checkout ${CURRENT_BRANCH}
     git rebase master
+    git stash pop
 }
 
