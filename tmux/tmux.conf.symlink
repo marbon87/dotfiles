@@ -63,11 +63,7 @@ set -g mode-style bg=white,fg=black,bold
 run-shell "powerline-daemon -q"
 run-shell "powerline-config tmux setup"
 
-if-shell "if [[ `tmux -V | cut -d' ' -f2` < 2.1 ]]; then true; else false; fi" \
-        'set -g mode-mouse on; set -g mouse-resize-pane on; set -g mouse-select-pane on; set -g mouse-select-window on'
-
-if-shell "if [[ `tmux -V | cut -d' ' -f2` > 2.0 ]]; then true; else false; fi" \
-        'set -g mouse on'
+set -g mouse on
 
 if-shell "uname | grep -q Darwin" "source-file ~/.tmux-osx.conf"
 if-shell "uname | grep -q Linux" "source-file ~/.tmux-linux.conf"
