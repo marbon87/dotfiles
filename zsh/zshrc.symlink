@@ -43,6 +43,7 @@ HIST_STAMPS="yyyy-mm-dd"
 setopt inc_append_history
 # Reloads the history whenever you use it
 setopt share_history
+export SAVEHIST=1000000000
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
