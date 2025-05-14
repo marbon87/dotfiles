@@ -17,7 +17,7 @@ export CLICOLOR=1
 export LSCOLORS=exfxcxdxbxegedabagacad
 
 #grep
-export GREP_COLOR='0;31;40'
+export GREP_COLORS='0;31;40'
 alias grep="grep --color=always"
 
 # editor
